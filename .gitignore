@@ -1,0 +1,17 @@
+# dependencies
+node_modules
+
+# build artifacts
+*.css
+
+# testing
+coverage
+
+# production
+build
+build.zip
+
+# misc
+.DS_Store
+.env
+npm-debug.log
