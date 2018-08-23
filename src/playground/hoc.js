@@ -15,12 +15,15 @@ const Info = (props) => (
 )
 
 const withAdminWarning = (WrappedComponent) => {
-  return (props) => (
-    <div>
-      { props.isAdmin && <p>This is private info, please don't share</p> }
-      <WrappedComponent {...props} />
-    </div>
-  )
+  return (props) => {
+    const { isAdmin, info } = props
+    return (
+      <div>
+        { isAdmin && <p>This is private info, please don't share</p> }
+        <WrappedComponent info={info} />
+      </div>
+    )
+  }
 }
 
 const requireAuthentication = (WrappedComponent) => {
@@ -35,4 +38,16 @@ const AdminInfo = withAdminWarning(Info)
 
 const AuthInfo = requireAuthentication(Info)
 
-render(<AuthInfo isAuthenticated={false} info='These are the details' />, document.getElementById('app'))
+// This is an even higher order component
+const Overall = () => {
+  return (
+    <div>
+      <AuthInfo isAuthenticated info='test' />
+      <AdminInfo isAdmin info='this is the admin block' />
+    </div>
+  )
+}
+
+// render(<AuthInfo isAuthenticated={true} info='These are the details' />, document.getElementById('app'))
+
+render(<Overall isAdmin info='Talk to me' />, document.getElementById('app'))

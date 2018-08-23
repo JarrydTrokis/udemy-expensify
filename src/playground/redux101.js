@@ -53,7 +53,7 @@ const countReducer = (state = {count: 0}, action) => {
   }
 }
 
-const store = createStore(countReducer);
+const store = createStore(countReducer)
 
 // Actions - just an object that gets sent to the store
 store.subscribe(() => {
