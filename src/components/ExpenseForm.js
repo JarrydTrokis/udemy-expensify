@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import moment from 'moment'
 import { SingleDatePicker } from 'react-dates'
-import 'react-dates/lib/css/_datepicker.css'
 
 class ExpenseForm extends Component {
   constructor (props) {
@@ -13,7 +12,7 @@ class ExpenseForm extends Component {
       createdAt: props.expense ? moment(props.expense.createdAt) : moment(),
       calendarFocused: false,
       errorMessage: ''
-    }  
+    }
   }
 
   onDescriptionChange = (e) => {
