@@ -47,9 +47,9 @@ class ExpenseForm extends Component {
     const { description, amount, createdAt, note } = this.state
 
     if (!description || !amount) {
-      this.setState(() => ({ errorMessage: 'Please provide description and amount.'}))
+      this.setState(() => ({ errorMessage: 'Please provide description and amount.' }))
     } else {
-      this.setState(() => ({ errorMessage: ''}))
+      this.setState(() => ({ errorMessage: '' }))
       this.props.onSubmit({
         description: description,
         amount: parseFloat(amount, 10) * 100,
@@ -85,7 +85,7 @@ class ExpenseForm extends Component {
             numberOfMonths={1}
             isOutsideRange={() => false}
           />
-          <textarea 
+          <textarea
             value={this.state.note}
             onChange={this.onNoteChange}
           />
