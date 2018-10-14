@@ -15,10 +15,13 @@ const addExpense = ({ description = '', note = '', amount = 0, createdAt = 0 } =
 )
 
 // REMOVE_EXPENSE
-const removeExpense = ({ id } = {}) => ({
-  type: 'REMOVE_EXPENSE',
-  id
-})
+const removeExpense = ({ id } = {}) => {
+  console.log(id)
+  return {
+    type: 'REMOVE_EXPENSE',
+    id
+  }
+}
 
 // EDIT_EXPENSE
 const editExpense = (id, updates) => ({
