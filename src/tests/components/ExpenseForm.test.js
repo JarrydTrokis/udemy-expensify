@@ -2,7 +2,7 @@ import React from 'react'
 import { shallow } from 'enzyme'
 import moment from 'moment'
 import ExpenseForm from '../../components/ExpenseForm'
-import { singleExpense } from '../fixtures/fixtures'
+import { singleExpense } from '../fixtures/expenses'
 
 test('Should render ExpenseForm correctly', () => {
   const wrapper = shallow(<ExpenseForm />)
