@@ -1,4 +1,4 @@
-#Expensify App
+# Expensify App
 
 An application, built by following the React & Redux course, found on Udemy. [Course Link](https://www.udemy.com/react-2nd-edition/learn/v4/overview). 
 
