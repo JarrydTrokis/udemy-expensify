@@ -11,9 +11,9 @@ exports[`Should render a single Expese List Item 1`] = `
     </h3>
   </Link>
   <p>
-    3000
-     - 
-    86400000
+    £30.00
+    -
+    2nd January, 1970
   </p>
 </div>
 `;
