@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import moment from 'moment'
+import { toGBP } from '../helpers/toGBP'
 
 const ExpenseListItem = ({ dispatch, id, description, amount, createdAt }) => (
   <div>
@@ -8,7 +9,7 @@ const ExpenseListItem = ({ dispatch, id, description, amount, createdAt }) => (
       <h3>{description}</h3>
     </Link>
     <p>
-      {(amount / 100).toLocaleString('en-GB', { style: 'currency', currency: 'GBP' })}
+      {toGBP(amount)}
       -
       {moment(createdAt).format('Do MMMM, YYYY')}
     </p>

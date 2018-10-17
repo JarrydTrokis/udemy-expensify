@@ -7,8 +7,8 @@ export const ExpenseList = (props) => (
   <div>
     {
       props.expenses.length === 0
-      ? <p>No expenses</p>
-      : props.expenses.map((expense) => <ExpenseListItem key={expense.id} {...expense} />)
+        ? <p>No expenses</p>
+        : props.expenses.map((expense) => <ExpenseListItem key={expense.id} {...expense} />)
     }
   </div>
 )

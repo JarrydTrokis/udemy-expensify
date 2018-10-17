@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Should render a single Expese List Item 1`] = `
+exports[`Should render a single Expense List Item 1`] = `
 <div>
   <Link
     replace={false}

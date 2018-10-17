@@ -2,7 +2,7 @@
 
 exports[`Should render Dashboard correctly 1`] = `
 <div>
-  <br />
+  <Connect(ExpensesSummary) />
   <Connect(ExpenseListFilters) />
   <br />
   <Connect(ExpenseList) />
